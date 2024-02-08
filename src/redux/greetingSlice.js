@@ -10,17 +10,15 @@ export const fetchRandomGreeting = createAsyncThunk(
   'greetings/fetchRandomGreeting',
   async () => {
     try {
-      const response = await axios(
-        'http://localhost:3000/api/greetings/random',
-      );
+      const response = await axios('http://127.0.0.1:3000/api/greetings/random');
       if (!response) {
         throw new Error('Can not fetch greetings');
       }
-      const { data } = response;
+      const data = await response.data;
 
       return data.greeting;
     } catch (error) {
-      throw new Error('Cannot fetch quote');
+      throw new Error('Cannot fetch greeting');
     }
   },
 );
