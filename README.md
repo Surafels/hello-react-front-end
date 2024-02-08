@@ -77,9 +77,7 @@ npm install
 
 To use, run:
 
-```
 npm start
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
