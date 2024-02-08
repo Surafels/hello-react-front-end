@@ -16,7 +16,7 @@ export const fetchRandomGreeting = createAsyncThunk(
       }
       const data = await response.data;
 
-      return data.greeting;
+      return data;
     } catch (error) {
       throw new Error('Cannot fetch greeting');
     }
